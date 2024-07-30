@@ -1,0 +1,54 @@
+/* FORM CSS HERE */
+
+.inputX{
+    width: 100%;
+    background-color: var(--bg-a);
+    border-radius: 6px !important;
+
+    margin: 10px;
+    padding: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.inputX label, .inputX input{
+    display: block;
+
+    font-family: fontR;
+    font-size: 18px;
+
+}
+.inputX label{
+    width: 35% !important;
+
+    background-color: var(--theme);
+    color: var(--text-w);
+
+    padding: 10px 10px;
+    border-radius: 6px;
+}
+.inputX input{
+    /* width: 70%; */
+    width: calc(100% - 100px);
+    background-color: var(--bg-a);
+    color: var(--text-b);
+
+    padding: 0px 10px;
+}
+
+@media (min-width : 180px) and (max-width : 387px){
+    .login-container{ 
+        padding: 0;
+    }
+    .inputX label{
+        min-width: 40% !important;
+    }
+
+}
+@media (min-width : 911px) and (max-width : 1300px){
+    .inputX label{
+        min-width: 50% !important;
+    }
+}

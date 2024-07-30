@@ -1,0 +1,246 @@
+/*
+Md. Muhibbur Rahman  
+CSS 3.0
+Framework Ver: 1.0.0
+Last Updated :
+Designed by Muhib
+
+PROJECT : 
+*/
+
+
+/********** ROOT **********/
+:root{
+    --bg: #F4F4F4;
+    --bg-x: #a9cdff;
+    --bg-a: #C4C4C4;
+
+    --theme : #404040; 
+
+    --text-t : var(--theme);
+    --text-b : #180202;
+    --text-l : #575757;
+    --text-w : #FFFFFF;
+}
+
+
+/********** FONT **********/
+@font-face {
+    font-family: fontL;
+    src: url(../fonts/fontIL.ttf);
+}
+@font-face {
+    font-family: fontM;
+    src: url(../fonts/fontIM.ttf);
+}
+@font-face {
+    font-family: fontR;
+    src: url(../fonts/fontIR.ttf);
+}
+@font-face {
+    font-family: fontSB;
+    src: url(../fonts/fontISB.ttf);
+}
+
+
+
+
+/********** GENERAL **********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-b);
+    transition: 0.1s;
+}
+a:hover{
+    text-decoration: none;
+    color: var(--text-t);
+    transition: 0.1s;
+}
+
+
+input{
+    outline: none;
+    border: var(--border);
+    border-radius: var(--radiusA);
+    background-color: transparent;
+}
+textarea{
+    outline: none;
+    border: none;
+    border-radius: var(--radiusA);
+    background-color: transparent;
+    resize: none;
+}
+
+
+
+
+
+/********** CLASS **********/
+section{
+    background-color: var(--bg) !important;
+    border: none;
+    padding-bottom: 15px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: var(--radiusA);
+    overflow: hidden;
+    transition: 0.2s;
+}
+.section{
+    /* background-color: var(--bg-x); */
+    width: 98%;
+    margin: 0 auto;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapperX{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapperY{
+    display: flex;
+    align-items: center;
+}
+
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: var(--radiusA);
+    /* background-color: var(--bg-x); */
+    padding: 20px;
+}
+
+
+.dotted-hr{
+    border: 6px dotted white;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+
+
+
+/********** BUTTON **********/
+.btn{
+    background-color: var(--theme);
+    border: 2px solid var(--theme);
+    color: var(--text-w);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: fontM;
+    transition: 0.1s;
+}
+.btn:hover{
+    background-color: var(--bg-x);
+    color: var(--text-t);
+    border: 2px solid var(--theme);
+    transition: 0.1s;
+}
+.btnX{
+    border: 2px solid var(--theme);
+    color: var(--theme);
+    border-radius: 5px;
+    font: 16px fontM;
+    padding: 10px 20px;
+    transition: 0.1s;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btnX:hover{
+    background-color: var(--theme);
+    color: var(--text-w);
+    border: 2px solid var(--theme);
+    transition: 0.1s;
+}
+button[type="reset"]{
+    cursor: pointer;
+  }
+button[type="submit"]{
+    cursor: pointer;
+}
+
+/********** TEXT **********/
+.text{
+    font-size: 16px;
+    color: var(--text-b);
+    font-family: fontM;
+}
+.text-h{
+    font-size: 24px;
+    color: var(--text-t);
+    font-family: fontSB;
+}
+.text-n{
+    font-size: 20px;
+    color: var(--text-t);
+    font-family: fontSB;
+}
+.text-p{
+    font-size: 18px;
+    color: var(--text-l);
+    font-family: fontM;
+}
+.tc{
+    text-align: center;
+}
+.text-hl{
+    font-size: 18px;
+    color: var(--text-t);
+    font-family: fontB;
+}
+.disable-select {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+  }
+  
+/* Remove blue background on Chrome autofill */
+input:-webkit-autofill {
+    -webkit-box-shadow: none !important; /* Remove any background color */
+    -webkit-text-fill-color: var(--text-t) !important; /* Set the text color you want */
+}
+/* Remove blue background on Edge autofill */
+input:-ms-input-placeholder {
+    background-color: transparent !important; /* Remove any background color */
+    color: var(--text-t) !important; /* Set the text color you want */
+}
+
+
+/********** SCROLLBAR **********/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--bg-x);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--theme);
+    border-radius: 10px;
+    border: 2px solid var(--bg);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--theme-d);
+  }
+
+
+
