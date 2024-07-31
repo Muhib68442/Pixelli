@@ -1,59 +1,62 @@
 /* FORM CSS HERE */
 
-.inputX {
+.inputX{
     width: 100%;
     background-color: var(--bg-a);
     border-radius: 6px !important;
+
     margin: 10px;
     padding: 0px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-.inputX label, .inputX input {
+}
+.inputX label, .inputX input{
     display: block;
+
     font-family: fontR;
     font-size: 18px;
-}
 
-.inputX label {
-    min-width: 120px; /* Set a minimum width for labels */
-    max-width: 120px; /* Ensure all labels are the same width */
+}
+.inputX label{
+    width: 35% !important;
 
     background-color: var(--theme);
     color: var(--text-w);
     user-select: none;
     padding: 10px 10px;
     border-radius: 6px;
-    text-align: left; /* Align text to the right */
 }
-
-.inputX input {
-    width: calc(100% - 100px); 
+.inputX input{
+    /* width: 70%; */
+    width: calc(100% - 100px);
     background-color: var(--bg-a);
     color: var(--text-b);
     border: none;
-    border-radius: 6px;
-    padding: 10px; 
-    box-sizing: border-box; 
+    padding: 0px 10px;
 }
 
-.inputX select {
+.inputX select{
     margin: 0px 10px;
-    width: calc(100% - 150px);
+    width: calc(100% - 100px);
     background-color: var(--bg-a);
     border: none;
     font-family: fontR;
     font-size: 18px;
-    padding: 10px;
-    box-sizing: border-box; 
 }
 
-.inputX #phone {
+.inputX #phone{
     width: 100px !important;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 10px;
 }
+
+
+
+
+
+
 
 .tc-box {
     margin: 10px auto 0px 0px !important;
@@ -97,14 +100,15 @@
     color: var(--theme);
 }
 
-.inputX svg {
+
+
+.inputX svg{
     opacity: 50%;
-    width: 24px; /* Ensure SVG has a fixed size */
+    width: calc(100% - 95%);
     height: 24px;
     margin-right: 15px;
     cursor: pointer;
 }
-
 
 
 
@@ -119,9 +123,6 @@
 }
 @media (min-width : 911px) and (max-width : 1300px){
     .inputX label{
-        min-width: 30% !important;
-    }
-    .login-container{
-        width: 40%;
+        min-width: 50% !important;
     }
 }

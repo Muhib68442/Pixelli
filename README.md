@@ -1,2 +1,0 @@
-# Pixelli
-Pixelli - Photography Platform

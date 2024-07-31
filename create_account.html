@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Pixelli</title>
+    <title>Create Account - Pixelli</title>
 
     <link rel="stylesheet" href="res/css/mcss.css">
     <link rel="stylesheet" href="res/css/form.css">
@@ -117,6 +117,16 @@
                 margin: 0px 0px 0px auto;
             }
         }
+
+        .icon {
+            transition: color 0.3s;
+            color: #000; /* default color */
+        }
+
+        .show-password .icon {
+            color: #00f; /* color when password is visible */
+        }
+
         
     </style>
 </head>
@@ -133,39 +143,132 @@
                 <h3>Pixelli</h3>
             </div>
 
-            <!-- Email Field -->
             <div class="login-field">
                 <h3>Log in to your account</h3>
 
                 <form action="" method="POST">
                     <div class="login-field-row inputX ">
-                        <label for="email">Email ID : </label>
-                        <input type="email" name="email" id="email">
+                        <label for="user_name">Full Name</label>
+                        <input type="text" name="user_name" id="user_name">
                     </div>
     
-                    <!-- Password Field -->
-                    <div class="login-field-row inputX">
-                        <label for="password">Password : </label>
-                        <input type="password" name="password" id="password">
+                    <div class="login-field-row inputX ">
+                        <label for="">Content</label>
+                        <select type="" name="content_type" id="content_type">
+                            <option value="" selected>Select</option>
+                            <option value="">Aesthetic</option>
+                            <option value="">Portrait</option>
+                            <option value="">B/W</option>
+                            <option value="">No Idea</option>
+                        </select>
                     </div>
+
+                    <div class="login-field-row inputX ">
+                        <label for="user_email">Email ID</label>
+                        <input type="email" name="user_email" id="user_email">
+                    </div>
+
+                    <div class="login-field-row inputX ">
+                        <label for="phone">Phone</label>
+                        <select name="" id="phone">
+                            <option value="">+1</option>
+                            <option value="">+14</option>
+                            <option value="">+880</option>
+                        </select>
+
+                        
+                        <input type="tel" name="" id="">
+                    </div>
+
+                    <div class="login-field-row inputX">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+
+                        <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect x="0.989746" y="0.862549" width="64" height="64" fill="url(#pattern0_177_189)"/>
+                            <defs>
+                            <pattern id="pattern0_177_189" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_177_189" transform="scale(0.015625)"/>
+                            </pattern>
+                            <image id="image0_177_189" width="64" height="64" xlink:href="data:image/png;base64,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"/>
+                            </defs>
+                        </svg>
+                    </div>
+                    
+                    <div class="login-field-row inputX">
+                        <label for="confirm_password">Confirm</label>
+                        <input type="password" name="confirm_password" id="confirm_password">
+
+                        <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect x="0.989746" y="0.862549" width="64" height="64" fill="url(#pattern0_177_189)"/>
+                            <defs>
+                            <pattern id="pattern0_177_189" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_177_189" transform="scale(0.015625)"/>
+                            </pattern>
+                            <image id="image0_177_189" width="64" height="64" xlink:href="data:image/png;base64,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"/>
+                            </defs>
+                        </svg>
+                    </div>
+                    
+                    
+
+                    <div class="tc-box">
+                        <div class="tickbox-div"></div>
+
+                        <input type="checkbox" id="tickbox" class="tickbox-input">
+
+                        <p>I Agree the <a href="#">Terms & Conditions</a></p>
+                    </div>
+
+
 
                     <div class="login-footer">
                         <div class="login-ext-links">
-                            <a href="create_account.html">Create Account</a>
-                            <a href="#">Forget Password</a>
+                            <a href="login.html">Already have an account</a>
                         </div>
-                        <a href="#" class="btnX">Log In</a> 
+                        <a href="loading.html" class="btnX">Sign Up</a> 
                     </div>
                 </form>
                 
             </div>
 
-            <div></div> <!-- Blank div to bring the .login-field in the middle ! -->
-
-            
-
+            <div>
+                <!-- Blank div to bring the .login-field in the middle ! -->
+            </div>
 
         </div>
     </main>
+
+    <script>
+        document.querySelector('.tickbox-div').addEventListener('click', function() {
+            const checkbox = document.getElementById('tickbox');
+            checkbox.checked = !checkbox.checked;
+
+            checkbox.checked == true ? console.log("checked") : console.log("unchecked");
+            this.style.backgroundColor = checkbox.checked ? 'var(--theme)' : 'var(--bg-a)';
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordFields = document.querySelectorAll('#password, #confirm_password');
+            
+            passwordFields.forEach(field => {
+                const svg = field.nextElementSibling;
+                const toggleVisibility = () => {
+                    const isPasswordVisible = field.type === 'text';
+                    field.type = isPasswordVisible ? 'password' : 'text';
+                    svg.style.fill = isPasswordVisible ? 'var(--bg-a)' : 'var(--theme)';
+                };
+                
+                svg.addEventListener('click', toggleVisibility);
+            });
+        });
+
+
+
+
+    </script>
+        
+        
 </body>
 </html>
